@@ -526,7 +526,9 @@ a.social-link.footer-link:focus{
     position: absolute;
     border-radius: 4px;
     background-color: #FCFCFC;
-    box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     width: 408px;
     min-height: 584px;
     top: 50%;
@@ -688,7 +690,7 @@ a.social-link.footer-link:focus{
 .input-checkbox:checked + .label-checkbox > .custom-checkbox{
     background-color: #404BBF;
     border: none;
-    fill: #fff;
+    fill: #F4F4FD;
 }
 
 .privacy-link {
