@@ -448,6 +448,7 @@ a.social-link.footer-link:focus{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open{
@@ -457,16 +458,17 @@ a.social-link.footer-link:focus{
 }
 
 .modal{
+    padding: 72px 24px 24px 24px;
     position: absolute;
-    padding: 24px;
     border-radius: 4px;
     background-color: #FCFCFC;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0pxrgb(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+    box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     width: 408px;
     min-height: 584px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn{
@@ -475,16 +477,20 @@ a.social-link.footer-link:focus{
     right: 24px;
     width: 24px;
     height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
 .close-btn:focus{
     background-color: #404BBF;
-    border-color: transparent;
+    border: none;
 }
 
 .close-icon{
@@ -498,7 +504,6 @@ a.social-link.footer-link:focus{
 }
 
 .form-header{
-    margin-top: 48px;
     margin-bottom: 16px;
     text-align: center;
     color: #2E2F42;
@@ -512,9 +517,10 @@ a.social-link.footer-link:focus{
 }
 
 .form-label{
+    display: block;
     color:#8E8F99;
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     margin-bottom: 4px;
 }
@@ -570,6 +576,7 @@ a.social-link.footer-link:focus{
     outline: transparent;
     background-color: transparent;
     resize: none;
+    color: rgba(46, 47, 66, 0.4);
     font-size: 12px;
     font-weight: 400;
     line-height: 1.17;
@@ -610,14 +617,13 @@ a.social-link.footer-link:focus{
     cursor: pointer;
     margin-right: 8px;
     border-radius: 2px;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-checkbox:checked + .label-checkbox > .custom-checkbox{
     background-color: #404BBF;
-    border-color: transparent;
-}
-
-.checkbox-icon{
+    border: none;
     fill: #fff;
 }
 
